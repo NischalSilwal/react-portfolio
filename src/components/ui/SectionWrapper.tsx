@@ -73,7 +73,7 @@ export function SectionHeader({ title, subtitle, align = 'center', className = '
   const maxWidthClass = align === 'center' ? 'max-w-3xl mx-auto' : '';
 
   return (
-    <div className={`mb-12 md:mb-16 ${alignClass} ${maxWidthClass} ${className}`}>
+    <div className={`mb-8 md:mb-12 ${alignClass} ${maxWidthClass} ${className}`}>
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
         {title}
       </h2>
