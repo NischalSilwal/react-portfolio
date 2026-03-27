@@ -13,7 +13,7 @@ export function Hero({ isVisible }: HeroProps) {
   const scrollToSection = useCallback((href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const navHeight = 80;
+      const navHeight = 64;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navHeight;
 

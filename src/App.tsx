@@ -28,7 +28,7 @@ function App() {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          const navHeight = 80;
+          const navHeight = 64;
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - navHeight;
 
