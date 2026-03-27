@@ -18,7 +18,7 @@ export function Experience() {
       />
 
       {/* Work Experience */}
-      <div className="mb-16">
+      <div className="mb-12">
         <div className="flex items-center gap-3 mb-8">
           <div className="p-2 rounded-lg bg-primary-100 dark:bg-primary-900/30">
             <Icon name="briefcase" className="text-primary-600 dark:text-primary-400" />

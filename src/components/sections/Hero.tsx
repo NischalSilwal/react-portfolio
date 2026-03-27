@@ -27,7 +27,7 @@ export function Hero({ isVisible }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden"
     >
       {/* Background gradient effects */}
       <div className="absolute inset-0 -z-10">
@@ -166,10 +166,9 @@ export function Hero({ isVisible }: HeroProps) {
               className="flex flex-col items-center gap-2 text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
               aria-label="Scroll to next section"
             >
-              <span className="text-sm font-medium">Scroll Down</span>
-              <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-1.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-current animate-bounce" />
-              </div>
+              {/* <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-1.5">
+              <div className="w-1.5 h-1.5 rounded-full bg-current animate-bounce" />
+              </div> */}
             </button>
           </div>
         </div>

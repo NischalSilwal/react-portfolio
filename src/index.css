@@ -44,7 +44,7 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-12 md:py-16 lg:py-20;
   }
 
   .gradient-text {
@@ -75,24 +75,31 @@
   .animation-delay-100 {
     animation-delay: 100ms;
   }
+
   .animation-delay-200 {
     animation-delay: 200ms;
   }
+
   .animation-delay-300 {
     animation-delay: 300ms;
   }
+
   .animation-delay-400 {
     animation-delay: 400ms;
   }
+
   .animation-delay-500 {
     animation-delay: 500ms;
   }
+
   .animation-delay-600 {
     animation-delay: 600ms;
   }
+
   .animation-delay-700 {
     animation-delay: 700ms;
   }
+
   .animation-delay-800 {
     animation-delay: 800ms;
   }
@@ -110,12 +117,29 @@
     transform: translateY(0);
   }
 
-  .stagger-1 { transition-delay: 100ms; }
-  .stagger-2 { transition-delay: 200ms; }
-  .stagger-3 { transition-delay: 300ms; }
-  .stagger-4 { transition-delay: 400ms; }
-  .stagger-5 { transition-delay: 500ms; }
-  .stagger-6 { transition-delay: 600ms; }
+  .stagger-1 {
+    transition-delay: 100ms;
+  }
+
+  .stagger-2 {
+    transition-delay: 200ms;
+  }
+
+  .stagger-3 {
+    transition-delay: 300ms;
+  }
+
+  .stagger-4 {
+    transition-delay: 400ms;
+  }
+
+  .stagger-5 {
+    transition-delay: 500ms;
+  }
+
+  .stagger-6 {
+    transition-delay: 600ms;
+  }
 
   /* Glass effect */
   .glass {
@@ -136,6 +160,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
