@@ -35,7 +35,7 @@ export const skills: Skill[] = [
   { name: 'SQL Server', icon: '🗄️' },
   { name: 'Docker', icon: '🐳' },
   { name: 'JWT / OAuth', icon: '🔐' },
-  { name: 'Clean Arch', icon: '🏗️' },
+  { name: 'Clean Architecture', icon: '🏗️' },
 ];
 
 export const experiences: Experience[] = [
@@ -88,12 +88,12 @@ export const experiences: Experience[] = [
     isEducation: true,
     description: [
       'Foundation in software engineering, algorithms, databases, and system design.',
-      'Built academic projects and explored mobile development throughout the degree.',
+      'Built academic projects and explored software development throughout the degree.',
     ],
     techs: [
       { name: 'Computer Science', color: '#76ABAE', bgColor: 'rgba(118, 171, 174, 0.15)' },
       { name: 'BCA', color: '#76ABAE', bgColor: 'rgba(118, 171, 174, 0.15)' },
-      { name: 'Tribhuvan Uni', color: '#76ABAE', bgColor: 'rgba(118, 171, 174, 0.15)' },
+      { name: 'T.U.', color: '#76ABAE', bgColor: 'rgba(118, 171, 174, 0.15)' },
     ],
   },
 ];
@@ -184,7 +184,7 @@ export const contactLinks: ContactLink[] = [
   {
     label: 'LinkedIn',
     value: 'Nischal Silwal',
-    href: 'https://linkedin.com/in/nischal-silwal',
+    href: 'https://www.linkedin.com/in/nischal-silwal-1ba8b2324/',
     icon: '🔗',
   },
   {
@@ -193,12 +193,18 @@ export const contactLinks: ContactLink[] = [
     href: 'https://github.com/NischalSilwal',
     icon: '🐙',
   },
+  {
+    label: 'WhatsApp',
+    value: '9814235446',
+    href: 'https://wa.me/9779814235446',
+    icon: '💬',
+  },
 ];
 
 export const navLinks: NavLink[] = [
   { label: 'Home', href: '#hero' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Journey', href: '#experience' },
+  { label: 'Coding Journey', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];

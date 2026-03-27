@@ -7,7 +7,7 @@ import { SectionWrapper, SectionHeader, Icon } from '../ui';
  */
 export function Projects() {
   return (
-    <SectionWrapper id="projects">
+    <SectionWrapper id="projects" className="pt-4 md:pt-8 lg:pt-10">
       <SectionHeader
         title="Featured Projects"
         subtitle="A selection of projects I've built, contributed to, or am currently working on"
