@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Nischal Silwal - Full Stack Engineer</title>
+    <meta name="title" content="Nischal Silwal - Full Stack Engineer" />
+    <meta name="description" content="Frontend-focused Full Stack Engineer with 3+ years building modern web & mobile apps. Specialised in React, Next.js, TypeScript, React Native & .NET." />
+    <meta name="keywords" content="software engineer, full stack developer, React, TypeScript, Next.js, React Native, Nepal" />
+    <meta name="author" content="Nischal Silwal" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nischalsilwal.dev/" />
+    <meta property="og:title" content="Nischal Silwal - Full Stack Engineer" />
+    <meta property="og:description" content="Frontend-focused Full Stack Engineer with 3+ years building modern web & mobile apps." />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nischalsilwal.dev/" />
+    <meta property="twitter:title" content="Nischal Silwal - Full Stack Engineer" />
+    <meta property="twitter:description" content="Frontend-focused Full Stack Engineer with 3+ years building modern web & mobile apps." />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#030712" />
+
+    <!-- Prevent flash of unstyled content -->
+    <style>
+      html {
+        background-color: #030712;
+      }
+      html.light {
+        background-color: #ffffff;
+      }
+    </style>
+
+    <!-- Initialize theme before page renders to prevent flash -->
+    <script>
+      (function() {
+        const stored = localStorage.getItem('theme');
+        if (stored) {
+          document.documentElement.classList.remove('light', 'dark');
+          document.documentElement.classList.add(stored);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
