@@ -29,6 +29,7 @@ export interface Project {
   features: string[];
   techs: string[];
   icon: string;
+  monochrome?: boolean;
   links?: {
     frontend?: string;
     backend?: string;

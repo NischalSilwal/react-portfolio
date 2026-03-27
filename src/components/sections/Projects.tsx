@@ -1,6 +1,6 @@
 import { projects } from '../../data';
 import type { Project } from '../../data';
-import { SectionWrapper, SectionHeader, Icon } from '../ui';
+import { SectionWrapper, SectionHeader, Icon, DynamicIcon } from '../ui';
 
 /**
  * Projects section with card-based layout
@@ -52,9 +52,13 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500/5 to-accent-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
 
       {/* Header */}
-      <div className="flex items-start gap-4 mb-4">
-        <div className="p-3 rounded-xl bg-gray-100 dark:bg-gray-800 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 transition-colors duration-300">
-          <span className="text-2xl">{project.icon}</span>
+      <div className="flex items-center gap-4 mb-4">
+        <div className="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 transition-colors duration-300">
+          <DynamicIcon
+            icon={project.icon}
+            size={30}
+            monochrome={project.monochrome}
+          />
         </div>
         <div className="flex-1">
           <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors text-lg">
