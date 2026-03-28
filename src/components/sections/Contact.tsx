@@ -1,12 +1,10 @@
 import { contactLinks } from '../../data';
-import { SectionWrapper, SectionHeader, Icon } from '../ui';
+import { SectionWrapper, SectionHeader } from '../ui';
 
 /**
  * Contact section with clickable links
  */
 export function Contact() {
-  const emailLink = contactLinks.find(link => link.label === 'Email');
-
   return (
     <SectionWrapper id="contact">
       <SectionHeader
