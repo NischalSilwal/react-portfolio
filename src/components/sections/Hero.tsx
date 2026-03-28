@@ -40,24 +40,39 @@ export function Hero({ isVisible }: HeroProps) {
 
       <div className="section-container">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Availability badge */}
+          {/* Profile Image Card */}
           <div
             className={`
-              inline-flex items-center gap-2 px-4 py-2 rounded-full
-              bg-emerald-100 dark:bg-emerald-900/30
-              border border-emerald-200 dark:border-emerald-700
-              mb-8
+              flex justify-center mb-8
               transition-all duration-700 delay-100
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
             `}
           >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
-              {personalInfo.tagline}
-            </span>
+            <div className="relative group">
+              {/* Outer animated glow */}
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-500 via-accent-500 to-primary-400 opacity-70 blur-sm group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
+
+              {/* Inner frame border */}
+              <div className="relative p-1 rounded-2xl bg-gradient-to-br from-primary-400 via-accent-400 to-primary-600">
+                {/* Image container */}
+                <div className="relative w-48 h-32 sm:w-56 sm:h-36 md:w-64 md:h-44 rounded-xl overflow-hidden bg-gradient-to-br from-primary-100 to-accent-100 dark:from-primary-900/40 dark:to-accent-900/40">
+                  {personalInfo.avatar ? (
+                    <img
+                      src={personalInfo.avatar}
+                      alt={`${personalInfo.name} ${personalInfo.surname}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    /* Initials fallback */
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-4xl sm:text-5xl font-bold gradient-text select-none">
+                        {personalInfo.name[0]}{personalInfo.surname[0]}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Name and Title */}

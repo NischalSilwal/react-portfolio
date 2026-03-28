@@ -59,6 +59,7 @@ export interface PersonalInfo {
   email: string;
   github: string;
   linkedin: string;
+  avatar?: string;
   stats: {
     years: string;
     yearsLabel: string;
