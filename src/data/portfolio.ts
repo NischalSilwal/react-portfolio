@@ -122,7 +122,8 @@ export const projects: Project[] = [
       'MediatR',
       'Clean Architecture',
     ],
-    icon: '📚',
+    icon: 'https://img.icons8.com/ios-filled/100/book-shelf.png',
+    monochrome: true,
     links: {
       frontend: 'https://github.com/NischalSilwal/CleanArchitcture-lms-frontend',
       backend: 'https://github.com/NischalSilwal/CleanArchitcture-lms-API',
@@ -152,7 +153,8 @@ export const projects: Project[] = [
       'Expo',
       'TypeScript',
     ],
-    icon: '🛒',
+    icon: 'https://img.icons8.com/ios-glyphs/100/purchase-order.png',
+    monochrome: true,
     links: {
       live: 'https://business.dev.retack.ai',
     },
@@ -168,11 +170,12 @@ export const projects: Project[] = [
       'Open source contributions',
     ],
     techs: ['GitHub', '@NischalSilwal'],
-    icon: '🔭',
+    icon: 'https://img.icons8.com/ios-filled/100/more.png',
+    monochrome: true,
     links: {
       github: 'https://github.com/NischalSilwal',
     },
-    isPlaceholder: true,
+    isPlaceholder: false,
   },
 ];
 
@@ -181,25 +184,25 @@ export const contactLinks: ContactLink[] = [
     label: 'Email',
     value: 'nischalsilwalhtd@gmail.com',
     href: 'mailto:nischalsilwalhtd@gmail.com',
-    icon: '📧',
+    icon: 'https://img.icons8.com/ios-glyphs/30/new-post.png',
   },
   {
     label: 'LinkedIn',
     value: 'Nischal Silwal',
     href: 'https://www.linkedin.com/in/nischal-silwal-1ba8b2324/',
-    icon: '🔗',
+    icon: 'https://img.icons8.com/ios-filled/30/linkedin.png',
   },
   {
     label: 'GitHub',
     value: '@NischalSilwal',
     href: 'https://github.com/NischalSilwal',
-    icon: '🐙',
+    icon: 'https://img.icons8.com/ios-glyphs/30/github.png',
   },
   {
     label: 'WhatsApp',
     value: '9814235446',
     href: 'https://wa.me/9779814235446',
-    icon: '💬',
+    icon: 'https://img.icons8.com/ios-glyphs/30/whatsapp.png',
   },
 ];
 

@@ -12,3 +12,4 @@ export { ThemeToggle } from './ThemeToggle';
 export { AnimatedNumber } from './AnimatedNumber';
 
 export { Icon } from './Icon';
+export { DynamicIcon } from './DynamicIcon';
