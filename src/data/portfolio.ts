@@ -131,7 +131,7 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    name: 'Nyauli — SaaS Platform',
+    name: 'Kinyo — SaaS Platform',
     description:
       'Cross-platform SaaS app in a Tamagui monorepo — Next.js for web, React Native Expo for mobile, sharing components and utilities across both.',
     features: [
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     icon: 'https://img.icons8.com/ios-glyphs/100/purchase-order.png',
     monochrome: true,
     links: {
-      live: 'https://business.dev.retack.ai',
+      live: 'https://www.kinyoapp.com/',
     },
   },
   {
