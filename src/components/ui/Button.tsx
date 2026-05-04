@@ -6,6 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   href?: string;
   external?: boolean;
+  download?: boolean | string;
 }
 
 /**
@@ -13,7 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * Supports both button and anchor link modes
  */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = 'primary', size = 'md', children, className = '', href, external, ...props }, ref) => {
+  ({ variant = 'primary', size = 'md', children, className = '', href, external, download, ...props }, ref) => {
     const baseStyles = `
       inline-flex items-center justify-center gap-2 font-semibold rounded-xl
       transition-all duration-300 ease-out
@@ -68,6 +69,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className={combinedClassName}
           target={external ? '_blank' : undefined}
           rel={external ? 'noopener noreferrer' : undefined}
+          download={download}
         >
           {children}
         </a>
