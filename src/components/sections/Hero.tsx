@@ -135,9 +135,18 @@ export function Hero({ isVisible }: HeroProps) {
               external
             >
               <Icon name="github" size="md" />
-              View GitHub
-            </Button>
-          </div>
+               View GitHub
+             </Button>
+             <Button
+               variant="outline"
+               size="lg"
+               href="/CV_Nischal_Silwal.pdf"
+               download
+             >
+               <Icon name="download" size="md" />
+               Download My CV
+             </Button>
+           </div>
 
           {/* Stats */}
           <div
