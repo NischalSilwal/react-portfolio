@@ -13,8 +13,8 @@ export function Skills() {
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        {skills.map((skill, index) => (
-          <SkillCard key={skill.name} skill={skill} index={index} />
+        {skills.map((skill) => (
+          <SkillCard key={skill.name} skill={skill} />
         ))}
       </div>
     </SectionWrapper>
@@ -23,10 +23,9 @@ export function Skills() {
 
 interface SkillCardProps {
   skill: { name: string; icon: string };
-  index: number;
 }
 
-function SkillCard({ skill, index }: SkillCardProps) {
+function SkillCard({ skill }: SkillCardProps) {
   return (
     <div
       className="
@@ -39,7 +38,6 @@ function SkillCard({ skill, index }: SkillCardProps) {
         cursor-default
         hover:-translate-y-1
       "
-      style={{ animationDelay: `${index * 50}ms` }}
     >
       {/* Icon and name */}
       <div className="flex flex-col items-center gap-3 text-center">

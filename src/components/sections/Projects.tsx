@@ -14,11 +14,10 @@ export function Projects() {
       />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <ProjectCard
             key={project.id}
             project={project}
-            index={index}
           />
         ))}
       </div>
@@ -28,10 +27,9 @@ export function Projects() {
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
 }
 
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project }: ProjectCardProps) {
   const isPlaceholder = project.isPlaceholder;
 
   return (
@@ -46,7 +44,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         ${isPlaceholder ? 'border-dashed' : ''}
         hover:-translate-y-2
       `}
-      style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Glow effect */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500/5 to-accent-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />

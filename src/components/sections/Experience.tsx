@@ -34,8 +34,8 @@ export function Experience() {
 
           {/* Experience cards */}
           <div className="space-y-8">
-            {workExperiences.map((exp, index) => (
-              <TimelineItem key={exp.id} experience={exp} index={index} />
+            {workExperiences.map((exp) => (
+              <TimelineItem key={exp.id} experience={exp} />
             ))}
           </div>
         </div>
@@ -59,8 +59,8 @@ export function Experience() {
 
             {/* Education cards */}
             <div className="space-y-8">
-              {educationExperiences.map((exp, index) => (
-                <TimelineItem key={exp.id} experience={exp} index={index} />
+              {educationExperiences.map((exp) => (
+                <TimelineItem key={exp.id} experience={exp} />
               ))}
             </div>
           </div>
@@ -72,10 +72,9 @@ export function Experience() {
 
 interface TimelineItemProps {
   experience: Experience;
-  index: number;
 }
 
-function TimelineItem({ experience, index }: TimelineItemProps) {
+function TimelineItem({ experience }: TimelineItemProps) {
   const isEducation = experience.isEducation;
   const dotColor = isEducation
     ? 'bg-accent-500 dark:bg-accent-400'
@@ -84,7 +83,6 @@ function TimelineItem({ experience, index }: TimelineItemProps) {
   return (
     <div
       className="relative pl-16 md:pl-20"
-      style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Timeline dot */}
       <div

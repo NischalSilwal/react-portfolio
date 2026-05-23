@@ -1,5 +1,4 @@
 import { type ReactNode, useRef, useEffect } from 'react';
-import { useIntersectionObserver } from '../../hooks';
 
 interface SectionWrapperProps {
   id: string;
@@ -9,9 +8,6 @@ interface SectionWrapperProps {
   registerSection?: (id: string, element: Element | null) => void;
 }
 
-/**
- * Wrapper component for sections with scroll-triggered animations
- */
 export function SectionWrapper({
   id,
   children,
@@ -20,39 +16,19 @@ export function SectionWrapper({
   registerSection,
 }: SectionWrapperProps) {
   const sectionRef = useRef<HTMLElement>(null);
-  const [refCallback, isVisible] = useIntersectionObserver<HTMLElement>({
-    threshold: 0.1,
-    rootMargin: '-50px',
-    freezeOnceVisible: true,
-  });
 
-  // Register section for active section tracking
   useEffect(() => {
     if (sectionRef.current && registerSection) {
       registerSection(id, sectionRef.current);
     }
   }, [id, registerSection]);
 
-  // Combined ref callback
-  const combinedRef = (el: HTMLElement | null) => {
-    // Update the section ref
-    sectionRef.current = el;
-    // Call the intersection observer callback
-    refCallback(el);
-  };
-
   return (
     <section
-      ref={combinedRef}
+      ref={sectionRef}
       id={id}
       data-section-id={id}
-      className={`
-        section-padding
-        opacity-0 translate-y-8
-        transition-all duration-700 ease-out
-        ${isVisible ? 'opacity-100 translate-y-0' : ''}
-        ${className}
-      `}
+      className={`section-padding ${className}`}
     >
       <div className={`section-container ${containerClassName}`}>
         {children}

@@ -1,13 +1,11 @@
 import type { PersonalInfo, Skill, Experience, Project, ContactLink, NavLink } from './types';
-import profileImg from '../assets/images/nischalsilwal-profile.jpg';
 
 export const personalInfo: PersonalInfo = {
   name: 'Nischal',
   surname: 'Silwal',
   title: 'Full Stack Engineer',
-  tagline: 'Open to opportunities',
-  description: `Frontend-focused Full Stack Engineer with 3+ years building modern web & mobile apps. Specialised in React, Next.js, TypeScript, React Native & .NET — shipping clean, scalable, fast products from Hetauda, Nepal.`,
-  avatar: profileImg,
+  description: `Full Stack Engineer with 3+ years building modern web & mobile apps. Specialised in React, Next.js, TypeScript, React Native & .NET — shipping clean, scalable, fast products from Hetauda, Nepal.`,
+  avatar: '/og-image.webp',
   email: 'nischalsilwalhtd@gmail.com',
   github: 'https://github.com/NischalSilwal',
   linkedin: 'https://linkedin.com/in/nischal-silwal',
