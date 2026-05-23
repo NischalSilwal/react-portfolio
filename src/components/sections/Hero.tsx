@@ -2,14 +2,7 @@ import { useCallback } from 'react';
 import { personalInfo } from '../../data';
 import { Button, Icon } from '../ui';
 
-interface HeroProps {
-  isVisible: boolean;
-}
-
-/**
- * Hero section with name, title, tagline, CTA buttons, and animated stats
- */
-export function Hero({ isVisible }: HeroProps) {
+export function Hero() {
   const scrollToSection = useCallback((href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -29,32 +22,20 @@ export function Hero({ isVisible }: HeroProps) {
       id="hero"
       className="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden"
     >
-      {/* Background gradient effects */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/20 dark:bg-accent-500/10 rounded-full blur-3xl animate-float animation-delay-500" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/20 dark:bg-accent-500/10 rounded-full blur-3xl" />
       </div>
 
-      {/* Grid pattern overlay */}
       <div className="absolute inset-0 -z-10 bg-mesh-pattern opacity-50 dark:opacity-30" />
 
       <div className="section-container">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Profile Image Card */}
-          <div
-            className={`
-              flex justify-center mb-8
-              transition-all duration-700 delay-100
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            `}
-          >
+          <div className="flex justify-center mb-8">
             <div className="relative group">
-              {/* Outer animated glow */}
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-500 via-accent-500 to-primary-400 opacity-70 blur-sm group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-500 via-accent-500 to-primary-400 opacity-70 blur-sm group-hover:opacity-100 transition-opacity duration-500" />
 
-              {/* Inner frame border */}
               <div className="relative p-1 rounded-2xl bg-gradient-to-br from-primary-400 via-accent-400 to-primary-600">
-                {/* Image container */}
                 <div className="relative w-48 h-32 sm:w-56 sm:h-36 md:w-64 md:h-44 rounded-xl overflow-hidden bg-gradient-to-br from-primary-100 to-accent-100 dark:from-primary-900/40 dark:to-accent-900/40">
                   {personalInfo.avatar ? (
                     <img
@@ -63,7 +44,6 @@ export function Hero({ isVisible }: HeroProps) {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    /* Initials fallback */
                     <div className="w-full h-full flex items-center justify-center">
                       <span className="text-4xl sm:text-5xl font-bold gradient-text select-none">
                         {personalInfo.name[0]}{personalInfo.surname[0]}
@@ -75,51 +55,26 @@ export function Hero({ isVisible }: HeroProps) {
             </div>
           </div>
 
-          {/* Name and Title */}
-          <div
-            className={`
-              transition-all duration-700 delay-200
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            `}
-          >
+          <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
               Hi, I'm{' '}
               <span className="gradient-text">{personalInfo.name} {personalInfo.surname}</span>
             </h1>
           </div>
 
-          <div
-            className={`
-              transition-all duration-700 delay-300
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            `}
-          >
+          <div>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6 font-medium">
               {personalInfo.title}
             </p>
           </div>
 
-          {/* Description */}
-          <div
-            className={`
-              max-w-3xl mx-auto
-              transition-all duration-700 delay-400
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            `}
-          >
+          <div className="max-w-3xl mx-auto">
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10">
               {personalInfo.description}
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div
-            className={`
-              flex flex-wrap items-center justify-center gap-4 mb-16
-              transition-all duration-700 delay-500
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            `}
-          >
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
             <Button
               variant="primary"
               size="lg"
@@ -148,52 +103,27 @@ export function Hero({ isVisible }: HeroProps) {
              </Button>
            </div>
 
-          {/* Stats */}
-          <div
-            className={`
-              grid grid-cols-3 gap-6 md:gap-8
-              max-w-2xl mx-auto
-              transition-all duration-700 delay-600
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            `}
-          >
+          <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-2xl mx-auto">
             <StatCard
               value={personalInfo.stats.years}
               label={personalInfo.stats.yearsLabel}
-              isVisible={isVisible}
-              delay={700}
             />
             <StatCard
               value={personalInfo.stats.companies}
               label={personalInfo.stats.companiesLabel}
-              isVisible={isVisible}
-              delay={800}
             />
             <StatCard
               value={personalInfo.stats.techs}
               label={personalInfo.stats.techsLabel}
-              isVisible={isVisible}
-              delay={900}
             />
           </div>
 
-          {/* Scroll indicator */}
-          <div
-            className={`
-              absolute bottom-8 left-1/2 -translate-x-1/2
-              transition-all duration-700 delay-1000
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            `}
-          >
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
             <button
               onClick={() => scrollToSection('#skills')}
               className="flex flex-col items-center gap-2 text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
               aria-label="Scroll to next section"
-            >
-              {/* <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-1.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-current animate-bounce" />
-              </div> */}
-            </button>
+            />
           </div>
         </div>
       </div>
@@ -204,27 +134,13 @@ export function Hero({ isVisible }: HeroProps) {
 interface StatCardProps {
   value: string;
   label: string;
-  isVisible: boolean;
-  delay: number;
 }
 
-function StatCard({ value, label, isVisible, delay }: StatCardProps) {
+function StatCard({ value, label }: StatCardProps) {
   return (
-    <div
-      className={`
-        p-6 rounded-2xl
-        bg-white/60 dark:bg-gray-900/60
-        backdrop-blur-sm
-        border border-gray-200/50 dark:border-gray-800/50
-        hover:border-primary-300 dark:hover:border-primary-700
-        hover:shadow-lg hover:shadow-primary-500/5
-        transition-all duration-300
-        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-      `}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
+    <div className="p-6 rounded-2xl bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border border-gray-200/50 dark:border-gray-800/50 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300">
       <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1">
-        {isVisible ? value : '0'}
+        {value}
       </div>
       <div className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium">
         {label}

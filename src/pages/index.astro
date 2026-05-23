@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../index.css';
+import App from '../App';
+
+// SSG: Pre-rendered to static HTML at build time
+export const prerender = true;
+---
+<Layout>
+  <App client:load />
+</Layout>

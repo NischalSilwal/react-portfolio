@@ -55,7 +55,6 @@ export interface PersonalInfo {
   name: string;
   surname: string;
   title: string;
-  tagline: string;
   description: string;
   email: string;
   github: string;

@@ -161,16 +161,14 @@ export function Navbar({ activeSection }: NavbarProps) {
                 e.preventDefault();
                 scrollToSection(link.href);
               }}
-              className={`
-                px-4 py-3 rounded-xl text-lg font-medium
-                transition-all duration-200
-                animate-slide-in-right
-                ${activeSection === getSectionId(link.href)
-                  ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
-                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                }
-              `}
-              style={{ animationDelay: `${index * 50}ms` }}
+                className={`
+                  px-4 py-3 rounded-xl text-lg font-medium
+                  transition-all duration-200
+                  ${activeSection === getSectionId(link.href)
+                    ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }
+                `}
             >
               {link.label}
             </a>
