@@ -55,22 +55,6 @@ export function Contact() {
             ))}
           </div>
         </div>
-
-        {/* Availability note */}
-        <div className="mt-10 text-center">
-          <div
-            className="
-              inline-flex items-center gap-2 px-4 py-2 rounded-full
-              bg-emerald-100 dark:bg-emerald-900/30
-              border border-emerald-200 dark:border-emerald-700
-            "
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-          </div>
-        </div>
       </div>
     </SectionWrapper>
   );

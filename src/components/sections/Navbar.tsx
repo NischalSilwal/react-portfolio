@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { navLinks, personalInfo } from '../../data';
-import { Button, ThemeToggle, Icon } from '../ui';
+import { Button, Icon } from '../ui';
 
 interface NavbarProps {
   activeSection: string;
@@ -118,8 +118,6 @@ export function Navbar({ activeSection }: NavbarProps) {
 
           {/* Right side actions */}
           <div className="flex items-center gap-3">
-            <ThemeToggle />
-
             {/* GitHub button - desktop only */}
             <Button
               variant="secondary"

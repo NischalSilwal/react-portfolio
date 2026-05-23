@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -58,28 +58,11 @@
       }
     </script>
 
-    <!-- Prevent flash of unstyled content -->
     <style>
       html {
-        background-color: #ffffff;
-      }
-      html.dark {
         background-color: #030712;
       }
     </style>
-
-    <!-- Initialize theme before page renders to prevent flash -->
-    <script>
-      (function() {
-        const stored = localStorage.getItem('theme');
-        if (stored) {
-          document.documentElement.classList.remove('light', 'dark');
-          document.documentElement.classList.add(stored);
-        } else {
-          document.documentElement.classList.add('light');
-        }
-      })();
-    </script>
 
     <slot name="head" />
   </head>

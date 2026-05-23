@@ -7,7 +7,6 @@ export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 
 export { SectionWrapper, SectionHeader } from './SectionWrapper';
 
-export { ThemeToggle } from './ThemeToggle';
 
 export { AnimatedNumber } from './AnimatedNumber';
 
