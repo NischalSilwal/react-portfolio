@@ -88,7 +88,7 @@ export function Navbar({ activeSection }: NavbarProps) {
             }}
             className="text-xl font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
           >
-            {personalInfo.name}
+            {personalInfo.name} {personalInfo.surname}
             <span className="text-primary-500 dark:text-primary-400">.</span>
           </a>
 

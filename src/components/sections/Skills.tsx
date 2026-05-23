@@ -8,8 +8,8 @@ export function Skills() {
   return (
     <SectionWrapper id="skills">
       <SectionHeader
-        title="Skills & Technologies"
-        subtitle="Technologies I've been working with and mastered over the years"
+        title="Full Stack Skills & Technologies"
+        subtitle="Core technologies I've mastered: React, Next.js, TypeScript, and .NET"
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
