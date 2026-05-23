@@ -9,8 +9,8 @@ export function Projects() {
   return (
     <SectionWrapper id="projects" className="pt-4 md:pt-8 lg:pt-10">
       <SectionHeader
-        title="Featured Projects"
-        subtitle="A selection of projects I've built, contributed to, or am currently working on"
+        title="React & Full Stack Projects"
+        subtitle="A selection of modern web and mobile applications I've built using React, Next.js, and .NET"
       />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

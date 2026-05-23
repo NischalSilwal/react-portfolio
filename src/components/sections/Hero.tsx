@@ -41,7 +41,10 @@ export function Hero() {
                     <img
                       src={personalInfo.avatar}
                       alt={`${personalInfo.name} ${personalInfo.surname}`}
+                      width={256}
+                      height={176}
                       className="w-full h-full object-cover"
+                      loading="eager"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
@@ -63,9 +66,9 @@ export function Hero() {
           </div>
 
           <div>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6 font-medium">
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6 font-medium">
               {personalInfo.title}
-            </p>
+            </h2>
           </div>
 
           <div className="max-w-3xl mx-auto">

@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
-  site: 'https://nischalsilwal.vercel.app',
-  integrations: [react()],
+  site: 'https://www.nischalsilwal.com.np',
+  integrations: [react(), sitemap()],
   vite: {
     resolve: {
       alias: {
