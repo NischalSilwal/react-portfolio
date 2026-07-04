@@ -1,9 +1,6 @@
 import { contactLinks } from '../../data';
 import { SectionWrapper, SectionHeader, DynamicIcon } from '../ui';
 
-/**
- * Contact section with clickable links
- */
 export function Contact() {
   return (
     <SectionWrapper id="contact">
@@ -13,8 +10,6 @@ export function Contact() {
       />
 
       <div className="max-w-6xl mx-auto px-4">
-        {/* Main contact card */}
-        {/* Contact links */}
         <div className="mt-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
             {contactLinks.map((link) => {
@@ -27,14 +22,11 @@ export function Contact() {
                   rel={isEmail ? undefined : "noopener noreferrer"}
                   title={link.value}
                   className="
-                    flex items-center gap-3 px-4 py-4 rounded-2xl w-full
-                    bg-white dark:bg-gray-900
-                    border border-gray-200 dark:border-gray-800
-                    hover:border-primary-300 dark:hover:border-primary-700
-                    hover:shadow-xl hover:shadow-primary-500/10
+                    flex items-center gap-3 px-4 py-4 rounded-md w-full
+                    bg-canvas border border-hairline
+                    hover:border-body/30
                     transition-all duration-300
                     group
-                    hover:-translate-y-1
                   "
                   aria-label={link.label}
                 >
@@ -46,10 +38,10 @@ export function Contact() {
                     />
                   </div>
                   <div className="text-left overflow-hidden">
-                    <div className="text-[0.7rem] uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+                    <div className="text-eyebrow-mono text-mute">
                       {link.label}
                     </div>
-                    <div className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors truncate">
+                    <div className="text-body-sm text-ink group-hover:text-primary transition-colors truncate">
                       {isEmail ? (
                         <span>
                           {link.value.split('@')[0]}

@@ -20,62 +20,42 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-20 pb-10"
     >
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/20 dark:bg-accent-500/10 rounded-full blur-3xl" />
-      </div>
-
-      <div className="absolute inset-0 -z-10 bg-mesh-pattern opacity-50 dark:opacity-30" />
-
       <div className="section-container">
         <div className="max-w-5xl mx-auto text-center">
           <div className="flex justify-center mb-8">
-            <div className="relative group">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-500 via-accent-500 to-primary-400 opacity-70 blur-sm group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative p-1 rounded-2xl bg-gradient-to-br from-primary-400 via-accent-400 to-primary-600">
-                <div className="relative w-48 h-32 sm:w-56 sm:h-36 md:w-64 md:h-44 rounded-xl overflow-hidden bg-gradient-to-br from-primary-100 to-accent-100 dark:from-primary-900/40 dark:to-accent-900/40">
-                  {personalInfo.avatar ? (
-                    <img
-                      src={personalInfo.avatar}
-                      alt={`${personalInfo.name} ${personalInfo.surname}`}
-                      width={256}
-                      height={176}
-                      className="w-full h-full object-cover"
-                      loading="eager"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-4xl sm:text-5xl font-bold gradient-text select-none">
-                        {personalInfo.name[0]}{personalInfo.surname[0]}
-                      </span>
-                    </div>
-                  )}
+            <div className="w-64 h-44 rounded-md overflow-hidden border border-hairline">
+              {personalInfo.avatar ? (
+                <img
+                  src={personalInfo.avatar}
+                  alt={`${personalInfo.name} ${personalInfo.surname}`}
+                  width={256}
+                  height={176}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-5xl font-bold text-ink select-none">
+                    {personalInfo.name[0]}{personalInfo.surname[0]}
+                  </span>
                 </div>
-              </div>
+              )}
             </div>
           </div>
 
-          <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-              Hi, I'm{' '}
-              <span className="gradient-text">{personalInfo.name} {personalInfo.surname}</span>
-            </h1>
-          </div>
+          <p className="text-eyebrow-mono text-primary mb-4">
+            FULL STACK ENGINEER
+          </p>
 
-          <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6 font-medium">
-              {personalInfo.title}
-            </h2>
-          </div>
+          <h1 className="text-display-xl text-ink-strong mb-4">
+            Hi, I'm {personalInfo.name} {personalInfo.surname}
+          </h1>
 
-          <div className="max-w-3xl mx-auto">
-            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10">
-              {personalInfo.description}
-            </p>
-          </div>
+          <p className="text-body-lg text-body leading-relaxed max-w-3xl mx-auto mb-10">
+            {personalInfo.description}
+          </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
             <Button
@@ -124,7 +104,7 @@ export function Hero() {
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
             <button
               onClick={() => scrollToSection('#skills')}
-              className="flex flex-col items-center gap-2 text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+              className="flex flex-col items-center gap-2 text-mute hover:text-primary transition-colors"
               aria-label="Scroll to next section"
             />
           </div>
@@ -141,11 +121,11 @@ interface StatCardProps {
 
 function StatCard({ value, label }: StatCardProps) {
   return (
-    <div className="p-6 rounded-2xl bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border border-gray-200/50 dark:border-gray-800/50 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300">
-      <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1">
+    <div className="p-6 rounded-md bg-canvas border border-hairline transition-colors duration-300 hover:border-body/30">
+      <div className="text-display-md text-ink-strong mb-1">
         {value}
       </div>
-      <div className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium">
+      <div className="text-body-sm text-body font-medium">
         {label}
       </div>
     </div>

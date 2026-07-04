@@ -6,14 +6,10 @@ interface NavbarProps {
   activeSection: string;
 }
 
-/**
- * Sticky Navbar with smooth scroll navigation and mobile hamburger menu
- */
 export function Navbar({ activeSection }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Handle scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -23,7 +19,6 @@ export function Navbar({ activeSection }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -35,7 +30,6 @@ export function Navbar({ activeSection }: NavbarProps) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -47,7 +41,6 @@ export function Navbar({ activeSection }: NavbarProps) {
     };
   }, [isMobileMenuOpen]);
 
-  // Smooth scroll to section
   const scrollToSection = useCallback((href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -63,7 +56,6 @@ export function Navbar({ activeSection }: NavbarProps) {
     setIsMobileMenuOpen(false);
   }, []);
 
-  // Get section ID from href
   const getSectionId = (href: string) => href.replace('#', '');
 
   return (
@@ -71,28 +63,23 @@ export function Navbar({ activeSection }: NavbarProps) {
       className={`
         fixed top-0 left-0 right-0 z-50
         transition-all duration-300
-        ${isScrolled
-          ? 'bg-white/90 dark:bg-gray-950/90 backdrop-blur-lg shadow-lg shadow-gray-900/5'
-          : 'bg-transparent'
-        }
+        ${isScrolled ? 'bg-canvas' : 'bg-transparent'}
       `}
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo/Name */}
           <a
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('#hero');
             }}
-            className="text-xl font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            className="text-body-sm-strong text-ink hover:text-primary transition-colors"
           >
             {personalInfo.name} {personalInfo.surname}
-            <span className="text-primary-500 dark:text-primary-400">.</span>
+            <span className="text-primary">.</span>
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
@@ -103,11 +90,11 @@ export function Navbar({ activeSection }: NavbarProps) {
                   scrollToSection(link.href);
                 }}
                 className={`
-                  px-4 py-2 rounded-lg text-sm font-medium
+                  px-3 py-2 rounded-sm text-body-sm
                   transition-all duration-200
                   ${activeSection === getSectionId(link.href)
-                    ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? 'text-primary bg-primary/10'
+                    : 'text-body hover:text-ink hover:bg-canvas-soft'
                   }
                 `}
               >
@@ -116,11 +103,9 @@ export function Navbar({ activeSection }: NavbarProps) {
             ))}
           </div>
 
-          {/* Right side actions */}
           <div className="flex items-center gap-3">
-            {/* GitHub button - desktop only */}
             <Button
-              variant="secondary"
+              variant="outline"
               size="sm"
               href={personalInfo.github}
               external
@@ -130,10 +115,9 @@ export function Navbar({ activeSection }: NavbarProps) {
               GitHub
             </Button>
 
-            {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="md:hidden p-2 rounded-sm text-body hover:text-ink hover:bg-canvas-soft transition-colors"
               aria-label="Toggle menu"
             >
               <Icon name={isMobileMenuOpen ? 'close' : 'menu'} size="lg" />
@@ -142,16 +126,15 @@ export function Navbar({ activeSection }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`
-          md:hidden fixed inset-0 top-16 bg-white dark:bg-gray-950
+          md:hidden fixed inset-0 top-16 bg-canvas
           transition-all duration-300 transform
           ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}
         `}
       >
         <div className="flex flex-col p-6 gap-2">
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -160,11 +143,11 @@ export function Navbar({ activeSection }: NavbarProps) {
                 scrollToSection(link.href);
               }}
                 className={`
-                  px-4 py-3 rounded-xl text-lg font-medium
+                  px-4 py-3 rounded-sm text-body-md-strong
                   transition-all duration-200
                   ${activeSection === getSectionId(link.href)
-                    ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? 'text-primary bg-primary/10'
+                    : 'text-body hover:text-ink hover:bg-canvas-soft'
                   }
                 `}
             >
@@ -172,8 +155,7 @@ export function Navbar({ activeSection }: NavbarProps) {
             </a>
           ))}
 
-          {/* Mobile GitHub button */}
-          <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+          <div className="mt-4 pt-4 border-t border-hairline">
             <Button
               variant="primary"
               size="lg"

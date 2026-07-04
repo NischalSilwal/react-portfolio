@@ -12,3 +12,4 @@ export { AnimatedNumber } from './AnimatedNumber';
 
 export { Icon } from './Icon';
 export { DynamicIcon } from './DynamicIcon';
+export { SkillIcon } from './SkillIcon';
