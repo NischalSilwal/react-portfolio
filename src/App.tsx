@@ -5,7 +5,6 @@ import { Navbar, Hero, Skills, Experience, Projects, Contact, Footer } from './c
 function App() {
   const { activeSection } = useActiveSection();
 
-  // Scroll to hash on initial load
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -26,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-all duration-500">
+    <div className="min-h-screen bg-canvas text-ink">
       <Navbar activeSection={activeSection} />
 
       <main>

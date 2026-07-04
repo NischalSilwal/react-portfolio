@@ -50,11 +50,11 @@ export function SectionHeader({ title, subtitle, align = 'center', className = '
 
   return (
     <div className={`mb-8 md:mb-12 ${alignClass} ${maxWidthClass} ${className}`}>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+      <h2 className="text-display-lg text-ink-strong mb-4">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="text-body-lg text-body leading-relaxed">
           {subtitle}
         </p>
       )}

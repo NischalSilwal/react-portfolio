@@ -7,46 +7,33 @@ interface BadgeProps {
   className?: string;
 }
 
-/**
- * Reusable Badge component for displaying labels and tags
- */
 export function Badge({ children, variant = 'default', size = 'sm', className = '' }: BadgeProps) {
   const baseStyles = `
-    inline-flex items-center gap-1 font-medium rounded-full
+    inline-flex items-center gap-1 font-medium
     transition-all duration-200
   `;
 
   const variants = {
     default: `
-      bg-gray-100 dark:bg-gray-800
-      text-gray-700 dark:text-gray-300
-      border border-gray-200 dark:border-gray-700
+      bg-canvas-soft text-ink border border-hairline rounded-pill
     `,
     primary: `
-      bg-primary-100 dark:bg-primary-900/30
-      text-primary-700 dark:text-primary-300
-      border border-primary-200 dark:border-primary-700
+      bg-primary/10 text-primary border border-primary/30 rounded-pill
     `,
     success: `
-      bg-emerald-100 dark:bg-emerald-900/30
-      text-emerald-700 dark:text-emerald-300
-      border border-emerald-200 dark:border-emerald-700
+      bg-emerald-900/20 text-emerald-400 border border-emerald-700/30 rounded-pill
     `,
     warning: `
-      bg-amber-100 dark:bg-amber-900/30
-      text-amber-700 dark:text-amber-300
-      border border-amber-200 dark:border-amber-700
+      bg-amber-900/20 text-amber-400 border border-amber-700/30 rounded-pill
     `,
     outline: `
-      bg-transparent
-      text-gray-600 dark:text-gray-400
-      border border-gray-300 dark:border-gray-600
+      bg-transparent text-body border border-hairline rounded-pill
     `,
   };
 
   const sizes = {
-    sm: 'px-2.5 py-0.5 text-xs',
-    md: 'px-3 py-1 text-sm',
+    sm: 'px-2 py-0.5 text-caption',
+    md: 'px-3 py-1 text-body-sm',
   };
 
   return (

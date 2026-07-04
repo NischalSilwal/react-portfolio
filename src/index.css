@@ -7,32 +7,32 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "calt", "rlig";
   }
 
   body {
-    @apply font-sans text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-950 transition-colors duration-300;
+    @apply font-sans text-ink bg-canvas;
   }
 
   ::selection {
-    @apply bg-primary-200 text-primary-900 dark:bg-primary-800 dark:text-primary-100;
+    @apply bg-primary/20 text-ink-strong;
   }
 
-  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100 dark:bg-gray-900;
+    @apply bg-canvas;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+    @apply bg-hairline rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-400 dark:bg-gray-600;
+    @apply bg-hairline-soft;
   }
 }
 
@@ -45,65 +45,18 @@
     @apply py-12 md:py-16 lg:py-20;
   }
 
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500;
-  }
-
-  .gradient-text-hover {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-accent-400;
-  }
-
-  .card-base {
-    @apply bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg;
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10 dark:hover:shadow-primary-500/5 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700;
-  }
-
-  .glow-effect {
-    @apply relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-500/20 before:to-accent-500/20 before:rounded-2xl before:blur-xl before:-z-10 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100;
-  }
-
   .text-balance {
     text-wrap: balance;
   }
 
-  /* Animation delay utilities */
-  .animation-delay-100 {
-    animation-delay: 100ms;
+  .hairline-card {
+    @apply bg-canvas border border-hairline rounded-md transition-colors duration-300;
   }
 
-  .animation-delay-200 {
-    animation-delay: 200ms;
+  .hairline-card-hover {
+    @apply hairline-card hover:border-body/30;
   }
 
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-
-  .animation-delay-700 {
-    animation-delay: 700ms;
-  }
-
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
-}
-
-@layer utilities {
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -115,45 +68,26 @@
     transform: translateY(0);
   }
 
-  .stagger-1 {
-    transition-delay: 100ms;
-  }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
 
-  .stagger-2 {
-    transition-delay: 200ms;
-  }
+  .stagger-1 { transition-delay: 100ms; }
+  .stagger-2 { transition-delay: 200ms; }
+  .stagger-3 { transition-delay: 300ms; }
+  .stagger-4 { transition-delay: 400ms; }
+  .stagger-5 { transition-delay: 500ms; }
+  .stagger-6 { transition-delay: 600ms; }
 
-  .stagger-3 {
-    transition-delay: 300ms;
-  }
-
-  .stagger-4 {
-    transition-delay: 400ms;
-  }
-
-  .stagger-5 {
-    transition-delay: 500ms;
-  }
-
-  .stagger-6 {
-    transition-delay: 600ms;
-  }
-
-  /* Glass effect */
-  .glass {
-    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg;
-  }
-
-  .glass-strong {
-    @apply bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl;
-  }
-
-  /* Focus styles */
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-canvas;
   }
 
-  /* Hide scrollbar but keep functionality */
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -163,7 +97,6 @@
     display: none;
   }
 
-  /* Line clamp utilities */
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -176,5 +109,124 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .text-display-xl {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -0.65px;
+  }
+
+  .text-display-lg {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+  }
+
+  .text-display-md {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }
+
+  .text-display-sm {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  .text-eyebrow-mono {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+  }
+
+  .text-eyebrow-uppercase {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+  }
+
+  .text-body-lg {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .text-body-md {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  .text-body-md-strong {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .text-body-sm {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .text-body-sm-strong {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23px;
+  }
+
+  .text-caption {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .text-caption-strong {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .text-code {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .text-code-strong {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    font-weight: 550;
+    line-height: 16px;
+  }
+
+  .text-button-md {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
   }
 }
