@@ -1,9 +1,6 @@
 import { skills } from '../../data';
-import { SectionWrapper, SectionHeader } from '../ui';
+import { SectionWrapper, SectionHeader, SkillIcon } from '../ui';
 
-/**
- * Skills section with grid layout and hover effects
- */
 export function Skills() {
   return (
     <SectionWrapper id="skills">
@@ -22,35 +19,22 @@ export function Skills() {
 }
 
 interface SkillCardProps {
-  skill: { name: string; icon: string };
+  skill: { name: string };
 }
 
 function SkillCard({ skill }: SkillCardProps) {
   return (
-    <div
-      className="
-        group relative p-5 rounded-xl
-        bg-white dark:bg-gray-900
-        border border-gray-200 dark:border-gray-800
-        hover:border-primary-300 dark:hover:border-primary-700
-        hover:shadow-lg hover:shadow-primary-500/10
-        transition-all duration-300
-        cursor-default
-        hover:-translate-y-1
-      "
-    >
-      {/* Icon and name */}
+    <div className="group relative p-5 rounded-md bg-canvas border border-hairline transition-all duration-300 cursor-default hover:border-body/30">
       <div className="flex flex-col items-center gap-3 text-center">
-        <span className="text-3xl group-hover:scale-110 transition-transform duration-300">
-          {skill.icon}
+        <span className="group-hover:scale-110 transition-transform duration-300 text-ink">
+          <SkillIcon name={skill.name} />
         </span>
-        <span className="font-semibold text-gray-900 dark:text-white text-sm">
+        <span className="text-body-sm-strong text-ink">
           {skill.name}
         </span>
       </div>
 
-      {/* Accent line on hover */}
-      <div className="absolute bottom-0 left-4 right-4 h-0.5 rounded-full bg-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute bottom-0 left-4 right-4 h-0.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
   );
 }
