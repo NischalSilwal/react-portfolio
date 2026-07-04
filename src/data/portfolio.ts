@@ -4,7 +4,7 @@ export const personalInfo: PersonalInfo = {
   name: 'Nischal',
   surname: 'Silwal',
   title: 'Full Stack Engineer',
-  description: `Full Stack Engineer with 3+ years building modern web & mobile apps. Specialised in React, Next.js, TypeScript, React Native & .NET — shipping clean, scalable, fast products from Hetauda, Nepal.`,
+  description: `Full Stack Engineer with 3+ years building modern web & mobile apps. Specialised in React, Next.js, TypeScript, Flutter, & FastAPI — shipping clean, scalable, products from Hetauda, Nepal.`,
   avatar: '/og-image.webp',
   email: 'nischalsilwalhtd@gmail.com',
   github: 'https://github.com/NischalSilwal',

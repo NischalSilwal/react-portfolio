@@ -73,18 +73,18 @@ export function Hero() {
               external
             >
               <Icon name="github" size="md" />
-               View GitHub
-             </Button>
-             <Button
-               variant="outline"
-               size="lg"
-               href="/CV_Nischal_Silwal.pdf"
-               download
-             >
-               <Icon name="download" size="md" />
-               Download My CV
-             </Button>
-           </div>
+              View GitHub
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              href="/CV_Nischal_Silwal.pdf"
+              download
+            >
+              <Icon name="download" size="md" />
+              Download My CV
+            </Button>
+          </div>
 
           <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-2xl mx-auto">
             <StatCard
@@ -121,11 +121,11 @@ interface StatCardProps {
 
 function StatCard({ value, label }: StatCardProps) {
   return (
-    <div className="p-6 rounded-md bg-canvas border border-hairline transition-colors duration-300 hover:border-body/30">
+    <div className="p-2 sm:p-6 rounded-md bg-canvas border border-hairline transition-colors duration-300 hover:border-body/30">
       <div className="text-display-md text-ink-strong mb-1">
         {value}
       </div>
-      <div className="text-body-sm text-body font-medium">
+      <div className="text-body-sm text-body font-medium break-words">
         {label}
       </div>
     </div>
