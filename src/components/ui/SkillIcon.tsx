@@ -11,6 +11,7 @@ export function SkillIcon({ name, className = '' }: SkillIconProps): ReactNode {
   switch (name) {
     case 'React':
     case 'React Native':
+    case 'React.js':
       return (
         <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="2" fill="currentColor" />
@@ -45,6 +46,7 @@ export function SkillIcon({ name, className = '' }: SkillIconProps): ReactNode {
       );
 
     case 'Redux':
+    case 'Redux Toolkit':
       return (
         <svg className={baseClass} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.634 16.504c.87-.075 1.543-.84 1.5-1.754-.047-.914-.796-1.648-1.709-1.648h-.061a1.71 1.71 0 00-1.648 1.769c.03.479.226.869.494 1.153-1.048 2.038-2.621 3.536-5.005 4.795-1.603.838-3.296 1.154-4.944.93-1.378-.195-2.456-.81-3.116-1.799-.988-1.499-1.078-3.116-.255-4.734.6-1.17 1.499-2.023 2.099-2.443a9.96 9.96 0 01-.42-1.543C-.868 14.408-.416 18.752.932 20.805c1.004 1.498 3.057 2.456 5.304 2.456.6 0 1.23-.044 1.843-.194 3.897-.749 6.848-3.086 8.541-6.532zm5.348-3.746c-2.32-2.728-5.738-4.226-9.634-4.226h-.51c-.253-.554-.837-.899-1.498-.899h-.045c-.943 0-1.678.81-1.647 1.753.03.898.794 1.648 1.708 1.648h.074a1.69 1.69 0 001.499-1.049h.555c2.309 0 4.495.674 6.488 1.992 1.527 1.005 2.622 2.323 3.237 3.897.538 1.288.509 2.547-.045 3.597-.855 1.647-2.294 2.517-4.196 2.517-1.199 0-2.367-.375-2.967-.644-.36.298-.96.793-1.394 1.093 1.318.598 2.652.943 3.94.943 2.922 0 5.094-1.647 5.919-3.236.898-1.798.824-4.824-1.47-7.416zM6.49 17.042c.03.899.793 1.648 1.708 1.648h.06a1.688 1.688 0 001.648-1.768c0-.9-.779-1.647-1.693-1.647h-.06c-.06 0-.15 0-.226.029-1.243-2.098-1.768-4.347-1.572-6.772.12-1.828.72-3.417 1.797-4.735.9-1.124 2.593-1.68 3.747-1.708 3.236-.061 4.585 3.971 4.689 5.574l1.498.45C17.741 3.197 14.686.62 11.764.62 9.02.62 6.49 2.613 5.47 5.535 4.077 9.43 4.991 13.177 6.7 16.174c-.15.195-.24.539-.21.868z" />
@@ -136,6 +138,199 @@ export function SkillIcon({ name, className = '' }: SkillIconProps): ReactNode {
           <line x1="16" y1="14" x2="20" y2="16" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
           <line x1="20" y1="8" x2="16" y2="10" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
           <line x1="8" y1="14" x2="4" y2="16" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
+        </svg>
+      );
+
+    case 'JavaScript':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.2" />
+          <text x="12" y="16" textAnchor="middle" fill="currentColor" fontSize="9" fontWeight="700" fontFamily="monospace">JS</text>
+        </svg>
+      );
+
+    case 'Python':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.2" />
+          <text x="12" y="16" textAnchor="middle" fill="currentColor" fontSize="9" fontWeight="700" fontFamily="monospace">Py</text>
+        </svg>
+      );
+
+    case 'C#':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.2" />
+          <text x="12" y="16" textAnchor="middle" fill="currentColor" fontSize="9" fontWeight="700" fontFamily="monospace">C#</text>
+        </svg>
+      );
+
+    case 'TanStack Query':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 11a8 8 0 10-2.34 5.66M20 4v7h-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'React Hook Form':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M7 8h10M7 12h10M7 16h6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        </svg>
+      );
+
+    case 'Zod':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+          <path d="M8.5 12l2.5 2.5 4.5-4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'Radix UI':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 20V4h5a5 5 0 010 10H7M12 14l5 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'Pixel-perfect Figma-to-code':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 2h3v6H9a3 3 0 010-6zM12 2h3a3 3 0 010 6h-3V2zM9 8h3v6H9a3 3 0 010-6zM12 8h3a3 3 0 010 6h-3V8zM9 14h3v3a3 3 0 11-3-3z" stroke="currentColor" strokeWidth="1.1" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'Responsive layouts':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="4" width="13" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M5 18h7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+          <rect x="16" y="7" width="6" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M18.5 18h1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        </svg>
+      );
+
+    case 'Reusable component libraries':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+          <path d="M4 7.5l8 4.5 8-4.5M12 12v9" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'FastAPI':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
+        </svg>
+      );
+
+    case 'Express.js':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.2" />
+          <text x="12" y="16" textAnchor="middle" fill="currentColor" fontSize="9" fontWeight="700" fontFamily="monospace">ex</text>
+        </svg>
+      );
+
+    case 'REST':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="5" cy="12" r="2.5" stroke="currentColor" strokeWidth="1.2" />
+          <circle cx="19" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.2" />
+          <circle cx="19" cy="19" r="2.5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M7.3 10.8l9.4-4.6M7.3 13.2l9.4 4.6" stroke="currentColor" strokeWidth="1.2" />
+        </svg>
+      );
+
+    case 'JWT':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M11 11l9 9M17 17l2-2M14 14l2-2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        </svg>
+      );
+
+    case 'OAuth':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="8" r="4" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M2 21c0-3.9 3.1-7 7-7h2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+          <path d="M16 18l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'RBAC':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="8" r="4" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M2 21c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+          <path d="M16 4.5a4 4 0 010 7.5M18 14.5c2.4 1 4 3.1 4 5.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        </svg>
+      );
+
+    case 'MySQL':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" stroke="currentColor" strokeWidth="1.2" />
+          <text x="12" y="14" textAnchor="middle" fill="currentColor" fontSize="5" fontWeight="700" fontFamily="monospace">MY</text>
+        </svg>
+      );
+
+    case 'Redis':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M4 5v5c0 1.7 3.6 3 8 3s8-1.3 8-3V5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M4 10v5c0 1.7 3.6 3 8 3s8-1.3 8-3v-5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M4 15v3c0 1.7 3.6 3 8 3s8-1.3 8-3v-3" stroke="currentColor" strokeWidth="1.2" />
+        </svg>
+      );
+
+    case 'Query Optimization':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18a8 8 0 1116 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M12 14l3.5-3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <circle cx="12" cy="14" r="1.5" fill="currentColor" />
+        </svg>
+      );
+
+    case 'Alembic Migrations':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="8" cy="5" rx="5" ry="2.5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M3 5v12c0 1.4 2.2 2.5 5 2.5 1.4 0 2.7-.3 3.6-.8M3 11c0 1.4 2.2 2.5 5 2.5 1.1 0 2.1-.2 3-.5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M15 14h6M18 11l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'Feature-Sliced Design Architecture':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+        </svg>
+      );
+
+    case 'Repository Pattern':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+          <path d="M3 11h18" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+        </svg>
+      );
+
+    case 'Service Patterns':
+      return (
+        <svg className={baseClass} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
         </svg>
       );
 

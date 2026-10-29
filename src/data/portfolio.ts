@@ -20,22 +20,32 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const skills: Skill[] = [
-  { name: 'React' },
+
+  // Frontend
   { name: 'Next.js' },
-  { name: 'React Native' },
-  { name: 'TypeScript' },
+  { name: 'React.js' },
   { name: 'Tailwind CSS' },
-  { name: 'Redux' },
-  { name: 'GraphQL' },
-  { name: 'Apollo Client' },
-  { name: 'ASP.NET Core' },
-  { name: 'Django' },
-  { name: 'Node.js' },
+  { name: 'Redux Toolkit' },
+
+  // UI Implementation
+  { name: 'Pixel-perfect Figma-to-code' },
+  { name: 'Responsive layouts' },
+
+  // Backend & APIs
+  { name: 'FastAPI' },
+  { name: 'Express.js' },
+  { name: 'RBAC' },
+
+  // Database & Caching
   { name: 'PostgreSQL' },
-  { name: 'SQL Server' },
-  { name: 'Docker' },
-  { name: 'JWT / OAuth' },
+  { name: 'MySQL' },
+  { name: 'Redis' },
+  { name: 'Query Optimization' },
+
+  // Architecture
   { name: 'Clean Architecture' },
+  { name: 'Feature-Sliced Design Architecture' },
+  { name: 'Repository Pattern' },
 ];
 
 export const experiences: Experience[] = [
@@ -159,35 +169,32 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    name: 'Hardware Hubz: B2B/B2C E-commerce Platform',
+    name: 'BookSatau: Peer-to-Peer Book Marketplace',
     description:
-      'A dual-mode e-commerce platform connecting hardware suppliers and customers — enabling bulk B2B trading and direct B2C retail in one seamless marketplace.',
+      'Peer-to-peer marketplace for buying, selling, and exchanging books, with fast search, smooth browsing, and reliable production infrastructure.',
     features: [
-      'Fully responsive UI engineered for seamless experience across all screen sizes',
-      'Built reusable, composable component architecture to accelerate feature development',
-      'Custom hooks with TanStack Query for centralized, cache-optimized API handling',
-      'Role-based authentication & authorization for suppliers, customers, and admins',
-      'Cloudflare CDN integration for fast, optimized image and video delivery',
-      'Implemented rate limiting to safeguard APIs against abuse and ensure platform stability',
+      'Built a marketplace where users can buy, sell, and exchange books, covering both frontend and backend end to end',
+      'Created reusable UI components with Radix UI and custom TanStack Query hooks for efficient REST API data fetching',
+      'Improved page performance with lazy loading, skeleton loaders, image compression, and pagination',
+      'Developed FastAPI REST APIs with rate limiting, Redis caching, and query optimization; managed schema changes with Alembic migrations',
+      'Set up production monitoring with GlitchTip and deployed using Docker and CI/CD pipelines',
     ],
     techs: [
-      'React',
       'Next.js',
-      'TypeScript',
-      'Tailwind CSS',
-      'Radix UI',
-      'TanStack Query',
       'FastAPI',
-      'Cloudflare CDN',
+      'PostgreSQL',
+      'Redis',
+      'Firebase Cloud Messaging',
+      'Docker',
     ],
-    icon: 'https://img.icons8.com/ios-glyphs/100/purchase-order.png',
+    icon: 'https://img.icons8.com/ios-glyphs/100/books.png',
     monochrome: true,
     links: {
-      live: 'https://hardwarehubz.com/',
+      live: 'https://booksatau.com/',
     },
   },
   {
-    id: 4,
+    id: 3,
     name: 'Afno Site: Social Commerce & Bio-Link Storefronts for Nepal',
     description:
       'A social commerce platform empowering Nepali entrepreneurs to launch a fully functional online store in minutes — turning any Instagram, TikTok, or Facebook bio link into a complete storefront with zero commission.',
@@ -216,32 +223,28 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 0,
-    name: 'Library Management System',
+    id: 4,
+    name: 'SafeLand: Education Consultancy Management System',
     description:
-      'Full-stack library application with Clean Architecture end-to-end — book management, lending workflows, and role-based user access.',
+      'Education consultancy platform that streamlines student onboarding, eligibility checks, application tracking, and counseling workflows in one place.',
     features: [
-      'JWT authentication with role-based authorisation',
-      'SQL Server with stored procedures and optimised schema',
-      'ASP.NET Core API with Clean Architecture and CQRS via MediatR',
-      'High-performance CRUD using Dapper + T-SQL with query optimisation',
-      'Repository Pattern on both API and MVC frontend layers',
-      'Responsive MVC UI with dynamic book search and filtering',
+      'Built a student management platform with role-based access control (RBAC) for admins, counselors, and staff',
+      'Automated student eligibility checks and application progress tracking, replacing manual spreadsheet-based workflows',
+      'Developed a Kanban task board and integrated Firebase Cloud Messaging (FCM) for real-time push notifications',
+      'Deployed the full-stack application on a VPS with Docker and automated CI/CD pipelines',
     ],
     techs: [
-      'ASP.NET Core',
-      'SQL Server',
-      'Dapper',
-      'T-SQL',
-      'CQRS',
-      'MediatR',
-      'Clean Architecture',
+      'Next.js',
+      'FastAPI',
+      'PostgreSQL',
+      'Firebase Cloud Messaging',
+      'Docker',
+      'CI/CD',
     ],
-    icon: 'https://img.icons8.com/ios-filled/100/book-shelf.png',
+    icon: 'https://img.icons8.com/ios-glyphs/100/graduation-cap.png',
     monochrome: true,
     links: {
-      frontend: 'https://github.com/NischalSilwal/CleanArchitcture-lms-frontend',
-      backend: 'https://github.com/NischalSilwal/CleanArchitcture-lms-API',
+      live: 'https://safeland.edu.np/',
     },
   },
 ];
