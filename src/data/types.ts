@@ -15,7 +15,6 @@ export interface Experience {
   year: string;
   company: string;
   role: string;
-  location: string;
   description: string[];
   techs: TechBadge[];
   isEducation?: boolean;

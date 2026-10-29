@@ -67,7 +67,7 @@ interface TimelineItemProps {
 function TimelineItem({ experience }: TimelineItemProps) {
   return (
     <div className="relative pl-16 md:pl-20">
-      <div className="absolute left-4 md:left-6 top-8 w-3 h-3 rounded-full bg-primary ring-2 ring-canvas" />
+      <div className="absolute left-6 md:left-8 top-8 w-3 h-3 -translate-x-1/2 rounded-full bg-primary ring-2 ring-canvas" />
 
       <div className="p-6 rounded-md bg-canvas border border-hairline transition-all duration-300 group hover:border-body/30">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
@@ -79,15 +79,6 @@ function TimelineItem({ experience }: TimelineItemProps) {
               <span className="text-body-md-strong text-primary">
                 {experience.company}
               </span>
-              {experience.location && (
-                <>
-                  <span className="hidden sm:inline text-mute">•</span>
-                  <span className="flex items-center gap-1 text-body-sm">
-                    <Icon name="location" size="sm" />
-                    {experience.location}
-                  </span>
-                </>
-              )}
             </div>
           </div>
 
